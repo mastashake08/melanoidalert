@@ -51,7 +51,10 @@ class MissingPersonController extends Controller
           'reward' => $request->reward,
           'picture_path' => $path,
           'description' => $request->description,
-          'user_id' => $request->user()->id
+          'user_id' => $request->user()->id,
+          'last_known_location' => $request->last_known_location,
+          'eye_color' => strtoupper($request->eye_color),
+          'hair_color' => strtoupper($request->hair_color)
 
         ]);
         return back();
@@ -114,6 +117,9 @@ class MissingPersonController extends Controller
           'reward' => $request->reward,
           'picture_path' => $path != null ? $path : $person->picture_path,
           'description' => $request->description,
+          'last_known_location' => $request->last_known_location,
+          'eye_color' => strtoupper($request->eye_color),
+          'hair_color' => strtoupper($request->hair_color)
         ]);
         $person->save();
         return redirect('/home');

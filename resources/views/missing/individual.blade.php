@@ -22,7 +22,13 @@
                   <br>
                   <strong>Height:</strong> {{$person->height}}
                   <br>
+                  <strong>Eye Color:</strong> {{$person->eye_color}}
+                  <br>
+                  <strong>Hair Color:</strong> {{$person->hair_color}}
+                  <br>
                   <strong>Last Seen:</strong> {{$person->last_seen}}
+                  <br>
+                  <strong>Last Known Location:</strong> {{$person->last_known_location}}
                   @if($person->reward != null)
                   <br>
                   <strong>Reward:</strong> {{$person->reward}}

@@ -38,7 +38,7 @@ class MissingPerson extends Notification
     public function toTwilio($notifiable)
     {
         return (new TwilioSmsMessage())
-            ->content("New Melanoid Alert {$this->person->name} last seen {$this->person->last_seen}. They are described as follows: {$this->person->description}");
+            ->content("New Melanoid Alert {$this->person->name} last seen {$this->person->last_seen} at {$this->person->last_known_location}.  They are described as follows: {$this->person->eye_color} eyes. {$this->person->hair_color} hair. {$this->person->description}");
     }
     /**
      * Get the mail representation of the notification.
