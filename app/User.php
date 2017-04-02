@@ -15,7 +15,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'name', 'email', 'password', 'phone'
     ];
 
     /**
@@ -26,4 +26,14 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    
+
+    protected function missingPeople(){
+      return $this->hasMany('App\MissingPerson');
+    }
+
+    public function routeNotificationForTwilio(){
+        return $this->phone;
+    }
 }

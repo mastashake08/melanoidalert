@@ -18,3 +18,9 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
+
+Route::resource('/missing-person','MissingPersonController');
+
+Route::get('/about',function(){
+return view('about');
+});
