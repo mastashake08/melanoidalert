@@ -24,6 +24,7 @@ class StripeController extends Controller
         "description" => "Donation To Melanoid Alert",
         "source" => $token,
       ));
+      return view('success');
     }
-    return view('success');
+
 }
