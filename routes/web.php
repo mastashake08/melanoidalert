@@ -24,3 +24,10 @@ Route::resource('/missing-person','MissingPersonController');
 Route::get('/about',function(){
 return view('about');
 });
+
+Route::get('/support', function(){
+
+  return view('support');
+});
+
+Route::post('/charge','StripeController@charge');

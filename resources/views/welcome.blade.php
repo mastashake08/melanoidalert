@@ -85,6 +85,7 @@
                 <div class="links">
                     <a href="{{url('/missing-person')}}">Missing Persons</a>
                     <a href="{{url('/about')}}">How Does It Work</a>
+                    <a href="{{url('/support')}}">Support</a>
                     <a href="https://jyroneparker.com" target="_blank">About The Author</a>
                 </div>
             </div>
