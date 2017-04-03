@@ -25,4 +25,5 @@ class StripeController extends Controller
         "source" => $token,
       ));
     }
+    return view('success');
 }

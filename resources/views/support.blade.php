@@ -13,18 +13,18 @@
                   Please help keep this vital service running.
 
                     <form action="{{url('/charge')}}" method="POST">
-
+                      {{ csrf_field() }}
                       <script
                         src="https://checkout.stripe.com/checkout.js" class="stripe-button"
                         data-key="{{env('STRIPE_KEY')}}"
                         data-amount="1000"
                         data-name="Melanoid Alert"
                         data-description="Donation"
-                        data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
+
                         data-locale="auto"
                         data-label="Donate To Melanoid Alert">
-                      </script>
-                      {{ csrf_field() }}
+                      </scrip
+
                     </form>
 
                 </div>
